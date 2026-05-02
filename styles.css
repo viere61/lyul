@@ -60,7 +60,6 @@ img {
 
 .eyebrow,
 .section-kicker,
-.project-meta,
 .site-footer {
   color: var(--color-muted);
   font-size: 11px;
@@ -166,17 +165,6 @@ h2 {
   letter-spacing: -0.015em;
 }
 
-.project-meta {
-  order: 4;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 12px;
-  letter-spacing: -0.02em;
-  text-transform: none;
-}
-
 .media-slot {
   order: 1;
   position: relative;
@@ -228,7 +216,7 @@ h2 {
 }
 
 .detail-shell {
-  width: min(100% - (var(--page-gutter) * 2), 960px);
+  width: min(100% - (var(--page-gutter) * 2), 1180px);
   padding-top: 42px;
 }
 
@@ -261,12 +249,6 @@ h2 {
   max-width: 12ch;
 }
 
-.detail-meta {
-  margin-top: 24px;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-line);
-}
-
 .detail-intro {
   max-width: 620px;
   margin-top: 30px;
@@ -295,28 +277,12 @@ h2 {
   gap: 9px;
 }
 
-.gallery-item img,
-.image-placeholder {
+.gallery-item img {
   border: 1px solid var(--color-line);
 }
 
 .gallery-item img {
   background: rgba(255, 255, 255, 0.34);
-}
-
-.image-placeholder {
-  min-height: 360px;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background:
-    linear-gradient(135deg, rgba(23, 23, 23, 0.045) 25%, transparent 25%) 0 0 / 18px 18px,
-    linear-gradient(315deg, rgba(23, 23, 23, 0.045) 25%, transparent 25%) 0 0 / 18px 18px,
-    rgba(255, 255, 255, 0.34);
-  color: var(--color-muted);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  text-align: center;
 }
 
 .image-full {
@@ -328,22 +294,11 @@ h2 {
   justify-self: center;
 }
 
-.image-narrow .image-placeholder {
-  min-height: 600px;
-}
-
 .image-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   align-items: start;
-}
-
-figcaption {
-  max-width: 520px;
-  color: var(--color-muted);
-  font-size: 12px;
-  line-height: 1.45;
 }
 
 @media (max-width: 560px) {
@@ -360,7 +315,6 @@ figcaption {
     gap: 12px;
   }
 
-  .project-meta,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
@@ -392,8 +346,4 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
-  .image-placeholder,
-  .image-narrow .image-placeholder {
-    min-height: 280px;
-  }
 }

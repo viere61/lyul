@@ -4,7 +4,7 @@ Static, minimal portfolio site for GitHub Pages.
 
 ## Edit Content
 
-- Update the bio, name, project titles, descriptions, and years in `index.html`.
+- Update the bio, name, project titles, and descriptions in `index.html`.
 - Duplicate an `<article class="project">...</article>` block in `index.html` to add more work to the homepage index.
 - Give each project title a link to a static detail page, such as `art/lake.html` or `interactions/project-title-one.html`.
 - Use the homepage `.media-slot` as an optional preview image, not the full portfolio presentation.
@@ -25,7 +25,7 @@ To add a new artwork:
 
 1. Duplicate one of the existing files in `art/`.
 2. Rename it, for example `new-artwork-title.html`.
-3. Update the page title, heading, year, description, and image placeholders.
+3. Update the page title, heading, description, and image.
 4. Link to it from the matching project title in `index.html`.
 
 ## Flexible Image Layouts
@@ -37,12 +37,11 @@ Detail pages include reusable gallery classes for different image needs:
 - `image-pair`: two related images side by side on desktop and stacked on mobile.
 - `image-stack`: a vertical sequence of images with generous spacing.
 
-Replace a placeholder like this:
+Add an image like this:
 
 ```html
 <figure class="gallery-item image-narrow">
   <img src="../assets/images/lake-detail.jpg" alt="Describe the artwork clearly" />
-  <figcaption>Optional caption, dimensions, material, or context.</figcaption>
 </figure>
 ```
 
