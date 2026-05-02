@@ -215,6 +215,125 @@ h2 {
   border-bottom: 1px solid currentColor;
 }
 
+.detail-shell {
+  width: min(100% - (var(--page-gutter) * 2), 960px);
+  padding-top: 42px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 82px;
+  color: var(--color-muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.back-link:hover {
+  color: var(--color-text);
+  transform: translateX(-4px);
+}
+
+.detail-page {
+  display: grid;
+  gap: 72px;
+}
+
+.detail-header,
+.detail-text {
+  max-width: var(--content-width);
+}
+
+.detail-header h1 {
+  max-width: 12ch;
+}
+
+.detail-meta {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-line);
+}
+
+.detail-intro {
+  max-width: 620px;
+  margin-top: 30px;
+  font-size: clamp(16px, 2.2vw, 19px);
+  line-height: 1.44;
+  letter-spacing: -0.025em;
+}
+
+.detail-text {
+  display: grid;
+  gap: 14px;
+}
+
+.detail-text h2 {
+  font-size: 21px;
+}
+
+.gallery,
+.image-stack {
+  display: grid;
+  gap: 34px;
+}
+
+.gallery-item {
+  display: grid;
+  gap: 9px;
+}
+
+.gallery-item img,
+.image-placeholder {
+  border: 1px solid var(--color-line);
+}
+
+.gallery-item img {
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.image-placeholder {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(23, 23, 23, 0.045) 25%, transparent 25%) 0 0 / 18px 18px,
+    linear-gradient(315deg, rgba(23, 23, 23, 0.045) 25%, transparent 25%) 0 0 / 18px 18px,
+    rgba(255, 255, 255, 0.34);
+  color: var(--color-muted);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.image-full {
+  width: 100%;
+}
+
+.image-narrow {
+  width: min(100%, 460px);
+  justify-self: center;
+}
+
+.image-narrow .image-placeholder {
+  min-height: 600px;
+}
+
+.image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+figcaption {
+  max-width: 520px;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 @media (max-width: 560px) {
   .site-shell {
     padding-top: 42px;
@@ -238,5 +357,26 @@ h2 {
 
   .media-slot {
     min-height: 190px;
+  }
+
+  .detail-shell {
+    width: min(100% - (var(--page-gutter) * 2), var(--content-width));
+  }
+
+  .back-link {
+    margin-bottom: 54px;
+  }
+
+  .detail-page {
+    gap: 52px;
+  }
+
+  .image-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .image-placeholder,
+  .image-narrow .image-placeholder {
+    min-height: 280px;
   }
 }
