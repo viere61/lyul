@@ -6,11 +6,6 @@
   --color-muted: #77736b;
   --color-line: #dedbd2;
   --color-neon: #c7ff00;
-  --label-blue: #bccbd0;
-  --label-pink: #d8b9bd;
-  --label-green: #c4cdb8;
-  --label-orange: #dcc1a4;
-  --label-brown: #c6b8a8;
   --content-width: 680px;
   --index-width: 980px;
   --page-gutter: clamp(20px, 5vw, 56px);
@@ -175,44 +170,11 @@ h2 {
   order: 4;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-start;
   font-family: "Courier New", Courier, monospace;
   font-size: 12px;
   letter-spacing: -0.02em;
   text-transform: none;
-}
-
-.label {
-  display: inline-flex;
-  align-items: center;
-  min-height: 18px;
-  padding: 1px 7px 2px;
-  background: var(--label-green);
-  color: var(--color-text);
-  border-radius: 999px;
-  font-family: "Courier New", Courier, monospace;
-  line-height: 1;
-}
-
-.label-blue {
-  background: var(--label-blue);
-}
-
-.label-pink {
-  background: var(--label-pink);
-}
-
-.label-green {
-  background: var(--label-green);
-}
-
-.label-orange {
-  background: var(--label-orange);
-}
-
-.label-brown {
-  background: var(--label-brown);
 }
 
 .media-slot {
