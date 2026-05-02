@@ -48,6 +48,18 @@ Replace a placeholder like this:
 
 Put image files in `assets/images/`. From pages inside `art/` or `interactions/`, image paths should usually start with `../assets/images/`.
 
+## Label Colors
+
+Labels use a muted Morandi palette. Assign colors manually by adding one of these classes to a label:
+
+```html
+<span class="label label-blue">Letterpress printing</span>
+<span class="label label-pink">Screenprinting</span>
+<span class="label label-green">Tangible</span>
+<span class="label label-orange">Research</span>
+<span class="label label-brown">Archive</span>
+```
+
 ## Fonts
 
 The site uses `Helvetica Neue` for body text and `Cormorant Garamond` for more personal, editorial moments such as the name, section headings, and project titles. Helvetica Neue is usually available on macOS; Cormorant Garamond should be added as a local webfont or loaded from a static font stylesheet if you want it to appear consistently across all devices.
